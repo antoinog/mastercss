@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinators</title>
+    <link rel="stylesheet" href="../styles/styled.css">
+</head>
+<body>
+    <h1>Compinators specify relationship between selectors</h1>
+    <ul>
+        <li>Descendent (using space) selects all under the tag incl. nested</li>
+        <li>Child combinator > immediate children</li>
+        <li>Adjacent Sibling + , just the one after</li>
+        <li>General Sibling ~ , all the ones after</li>
+    </ul>
+
+    <h2>Descendent (space), all li under section even nested</h2>
+    <pre>section li {color:red}</pre>
+    <section>
+        <li>standalone</li>
+        <ul>
+            <li>unordered</li>
+        </ul>
+        <ol>
+            <li>ordered</li>
+        </ol>
+        <div>
+            <li>under div</li>
+            <span>
+                <li>inside span</li>
+            </span>
+        </div>
+    </section>
+    <img src="../img/DescendentSelection.png" alt="">
+    
+    
+    <h2>Child >, only immediate children</h2>
+    <pre>div>li{color:green}</pre>
+    <li>standalone</li>
+    <div>
+        <li>under div</li>
+        <ol><li>under ordered</li></ol>
+        <ul><li>unordered</li></ul>
+    </div>
+
+    <h2>Adjacent + , only the one immediately after</h2>
+    <pre style="color: orange;">div+span+li{color: orange;}</pre>
+    <section>
+        <div>div</div>
+        <li>list after div</li>
+        <span>span</span>
+        <div>div</div>
+        <span>span</span>
+        <li>list after span after div</li>
+        <li>another list but not adjacent</li>   
+    </section>
+<h2>General sibling ~, all siblings after</h2>
+<pre style="color: blue;">span~li{color:blue}</pre>
+<p><li>list item under p</li></p>
+<ol>
+    <li>first</li>
+    <li>second</li>
+    <span>span</span>
+    <li>li after span</li>
+    <li>another li after span</li>
+</ol>
+
+</body>
+</html>

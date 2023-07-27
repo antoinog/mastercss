@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1,h2{
+            color: aquamarine;
+        }
+    </style>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <h1>Multiple elements Style h1 and 2</h1>
+    <h2>heading 2</h2>
+    <pre>
+        h1,h2{
+            color: aquamarine;
+        }
+    </pre>
+    <h3>Unstyled header 3</h3>
+
+    <h1 style="color: black;">Select by type, e.g. for inputs</h1>
+    <input type="text">
+    <input type="button" placeholder="hello" title="hello"/>
+    <input type="date">
+    <input type="email">
+    <input type="number">
+    <h1></h1>
+    <img src="../img/SelectByType.png" alt="">
+
+    <h1 style="color: black;">Precedence</h1>
+    <li>standalone list item</li>
+    <ul>
+        <li id="myID">Id has highest priority, usually used for one element</li>
+        <li class="unordered-list-item">class is next, used for several items</li>
+        <li>parent-child element has higher priority than standalone</li>
+        
+        <li class="unordered-list-item">A second class</li>
+
+    </ul>
+    <ol>
+        <li>lowest priority element on its own</li>
+        <li>This should be the li standalone style</li>
+    </ol>
+    <h3>standalone</h3>
+    <img src="../img/standalone.png" alt="">
+    <h3>with parent</h3>
+    <img src="../img/withparent.png" alt="">
+    <h3>class</h3>
+    <img src="../img/classselector.png" alt="">
+    <h3>id selector</h3>
+    <img src="../img/idselector.png" alt="">
+</body>
+</html>

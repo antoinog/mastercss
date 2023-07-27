@@ -1,0 +1,39 @@
+h3{
+    background-color: aqua;
+    color: blue;
+}
+
+/* standalone lowest priority listitem style*/
+li{
+    color: brown;
+}
+/* with parent higher priority listitem style*/
+ul li {
+    color: blue;
+}
+/* class higher priority listitem style*/
+.unordered-list-item{
+    color: green;
+}
+/* ID highest priority listitem style*/
+#myID{
+    color: red
+}
+img{
+    width: 50%;
+}
+
+input{
+    background-color: aqua;
+}
+input[type="email"]{
+    background-color: brown;
+}
+input[type="button"]{
+    color: red;
+    background-color: black;
+}
+section li{
+    color:red;
+}
+div>li{color:green}

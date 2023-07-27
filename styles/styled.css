@@ -1,0 +1,8 @@
+
+section li{
+    color:red;
+}
+div>li{color:green}
+
+div+span+li{color: orange;}
+span~li{color:blue}
